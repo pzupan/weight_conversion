@@ -1,7 +1,7 @@
 # WeightConversion (0.1.0)
 
 * [![Code Climate](https://codeclimate.com/github/pzupan/weight_conversion.png)](https://codeclimate.com/github/pzupan/weight_conversion)
-* [![Build Status](https://api.travis-ci.org/pzupan/weight_conversion.png)](https://travis-ci.org/shemerey/weight_conversion)
+* [![Build Status](https://api.travis-ci.org/pzupan/weight_conversion.png)](https://travis-ci.org/pzupan/weight_conversion)
 * [![Gem Version](https://badge.fury.io/rb/weight_conversion.png)](http://badge.fury.io/rb/weight_conversion)
 
 Weight object for converting from grams, ounces, pounds and kilograms into a common unit.
@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-### Basic Coversion
+### Basic Conversion
 
 ```ruby
  Weight.new(1, :lb).to_kgs # => 0.4536
