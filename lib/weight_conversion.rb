@@ -70,7 +70,7 @@ class Weight
    end
 
    def allowed_units
-      %w(gm oz lb)
+      [:gm, :oz, :lb]
    end
 
    def other_value(other)
