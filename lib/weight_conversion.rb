@@ -1,6 +1,6 @@
 require "weight_conversion/version"
 
-module WeightConversion
+class Weight
 
    def initialize(value=0.0, unit='lb')
       self.value = value
