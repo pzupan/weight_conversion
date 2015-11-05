@@ -20,11 +20,11 @@ class Weight
    end
 
    def to_ozs
-      data_in_grams * grams_per_ounce
+      data_in_grams / grams_per_ounce
    end
 
    def to_lbs
-      data_in_grams * grams_per_pound
+      data_in_grams / grams_per_pound
    end
 
    def to_i
