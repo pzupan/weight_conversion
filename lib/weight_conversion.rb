@@ -89,9 +89,9 @@ class Weight
       when :gm
          value
       when :oz
-         value / grams_per_ounce
+         value * grams_per_ounce
       when :lb
-         value / grams_per_pound
+         value * grams_per_pound
       else
          raise TypeError, 'Unit is not valid.'
       end
