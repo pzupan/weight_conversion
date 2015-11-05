@@ -2,7 +2,7 @@
 
 * [![Code Climate](https://codeclimate.com/github/pzupan/weight_conversion.png)](https://codeclimate.com/github/pzupan/weight_conversion)
 * [![Build Status](https://api.travis-ci.org/pzupan/weight_conversion.png)](https://travis-ci.org/pzupan/weight_conversion)
-* [![Gem Version](https://badge.fury.io/rb/weight_conversion.png)](http://badge.fury.io/rb/weight_conversion)
+* [![GitHub version](https://badge.fury.io/gh/pzupan%2Fweight_conversion.svg)](https://badge.fury.io/gh/pzupan%2Fweight_conversion)
 
 Weight object for converting from grams, ounces, pounds and kilograms into a common unit.
 
