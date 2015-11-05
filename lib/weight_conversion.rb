@@ -2,6 +2,8 @@ require "weight_conversion/version"
 
 class Weight
 
+   include Comparable
+
    def initialize(value=0.0, unit='lb')
       self.value = value
       self.unit = unit
@@ -27,12 +29,16 @@ class Weight
       (data_in_grams / grams_per_pound).round(4)
    end
 
+   def to_kgs
+      (data_in_grams / grams_per_kilogram).round(4)
+   end
+
    def to_i
-      value.to_i
+      value.round
    end
 
    def to_f
-      value.to_f
+      value.round(4).to_f
    end
 
    def +(other)
@@ -43,6 +49,16 @@ class Weight
    def -(other)
       return if is_not_weight?(other)
       self.class.new(value - other_value(other), unit)
+   end
+
+   def <=>(other)
+      return if is_not_weight?(other)
+      self.to_gms <=> other.to_gms
+   end
+
+   def ==(other)
+      return if is_not_weight?(other)
+      self.to_gms  == other.to_gms
    end
 
    def *(other)
@@ -70,7 +86,7 @@ class Weight
    end
 
    def allowed_units
-      [:gm, :oz, :lb]
+      [:gm, :oz, :lb, :kg]
    end
 
    def other_value(other)
@@ -81,6 +97,8 @@ class Weight
          other.to_ozs
       when :lb
          other.to_lbs
+      when :kg
+         other.to_kgs
       end
    end
 
@@ -92,6 +110,8 @@ class Weight
          value * grams_per_ounce
       when :lb
          value * grams_per_pound
+      when :kg
+         value * grams_per_kilogram
       else
          raise TypeError, 'Unit is not valid.'
       end
@@ -105,9 +125,13 @@ class Weight
       453.5923
    end
 
+   def grams_per_kilogram
+      1000
+   end
+
    def is_not_weight?(other)
-      return false if other.is_a?(WeightConversion)
-      raise TypeError, 'Not a WeightConversion class.'
+      return false if other.is_a?(Weight)
+      raise TypeError, 'Not a Weight class.'
       return true
    end
 
