@@ -1,4 +1,5 @@
 require "weight_conversion/version"
+require 'i18n'
 
 class Weight
 
@@ -7,6 +8,10 @@ class Weight
    def initialize(value=0.0, unit='lb')
       self.value = value
       self.unit = unit
+   end
+
+   def translated
+    I18n.t("weight.units.#{unit}")
    end
 
    def value

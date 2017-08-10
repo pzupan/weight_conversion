@@ -1,4 +1,4 @@
-# WeightConversion (0.1.0)
+# WeightConversion (0.2.0)
 
 * [![Code Climate](https://codeclimate.com/github/pzupan/weight_conversion.png)](https://codeclimate.com/github/pzupan/weight_conversion)
 * [![Build Status](https://api.travis-ci.org/pzupan/weight_conversion.png)](https://travis-ci.org/pzupan/weight_conversion)
