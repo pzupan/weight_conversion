@@ -1,5 +1,4 @@
 require "weight_conversion/version"
-require 'i18n'
 
 class Weight
 
