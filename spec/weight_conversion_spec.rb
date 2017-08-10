@@ -1,12 +1,5 @@
 require 'spec_helper'
 
-I18n.enforce_available_locales = false
-#I18n.locale = :en
-
-#I18n.load_path = (
-#puts  Pathname.new(__dir__).to_s.split(/\//)[0...-1] + ['config', 'locales', '**/*.yml']).join('/')
-
-
 describe Weight do
 
   let(:one_kg) { Weight.new(1, :kg) }
@@ -16,11 +9,6 @@ describe Weight do
 
   it 'should take two options value and unit type' do
     expect(Weight.new(1, :lb)).to be_instance_of(Weight)
-  end
-
-  it 'should translate' do
-    skip
-    expect(one_kg.translated).to eq('Kilogram')
   end
 
   describe 'math operators' do
